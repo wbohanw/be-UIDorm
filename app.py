@@ -44,7 +44,10 @@ app.json_encoder = MongoJSONEncoder
 
 @app.route('/')
 def index():
-    return jsonify({"message": "Color Dorm API"}), 200
+    if client:
+        return jsonify({"message": "Color Dorm API"}), 200
+    else:
+        return jsonify({"message": "Failed to connect to MongoDB"}), 500
 
 # Health check endpoint
 @app.route('/api/health', methods=['GET'])
