@@ -1,1 +1,1 @@
-web: gunicorn be.be-UIDorm.app:app
+web: gunicorn app:app
