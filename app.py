@@ -45,7 +45,7 @@ app.json_encoder = MongoJSONEncoder
 @app.route('/')
 def index():
     if client:
-        return jsonify({"message": "Color Dorm API"}), 200
+        return jsonify({"message": "Color Dorm API is running"}), 200
     else:
         return jsonify({"message": "Failed to connect to MongoDB"}), 500
 
