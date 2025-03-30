@@ -5,7 +5,7 @@ import datetime
 from bson.objectid import ObjectId
 
 load_dotenv()
-uri = os.getenv("MONGODB_URI")
+uri = os.environ.get("MONGODB_URI")
 
 # Connect to MongoDB
 client = MongoClient(uri)

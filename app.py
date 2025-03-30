@@ -18,7 +18,7 @@ from mangodb import (
 from dotenv import load_dotenv
 
 load_dotenv()
-client = MongoClient(os.getenv("MONGODB_URI"))
+client = MongoClient(os.environ.get("MONGODB_URI"))
 db = client["my_app_db"]
 
 users_collection = db["users_collection"]
